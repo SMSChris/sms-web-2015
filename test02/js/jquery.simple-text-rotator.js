@@ -85,10 +85,11 @@
             $("<span class='front'>" + initial + "</span>").appendTo(el);
             $("<span class='back'>" + array[index + 1] + "</span>").appendTo(el);
             el.wrapInner("<span class='rotating' />").find(".rotating").hide().addClass("flip up").show().css({
+			  "transform": " rotateX(180deg)",
               "-webkit-transform": " rotateX(-180deg)",
               "-moz-transform": " rotateX(-180deg)",
               "-o-transform": " rotateX(-180deg)",
-              "transform": " rotateX(-180deg)"
+			  "-ms-transform": " rotateX(0deg)",
             })
             
           break;
